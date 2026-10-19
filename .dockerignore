@@ -1,0 +1,26 @@
+# Never commit personal data, secrets or build output
+node_modules/
+.env
+.env.*
+!.env.example
+*.db
+*.db-*
+*.sqlite*
+data/app.db*
+data/submissions*.json
+data/outbox*
+outbox*.jsonl
+uploads/
+shots/
+backups/
+test/fixtures/
+*.log
+*.tmp
+*.pre-*
+scripts/stripe-mock.js
+scripts/stripe-sim-webhook.js
+.git
+Dockerfile
+docker-compose.yml
+*.md
+!README.md

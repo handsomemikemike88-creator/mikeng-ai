@@ -1,0 +1,43 @@
+{
+  "_note": "Mikey's price list, 2026-10-19. The ONLY prices allowed on the site (HKD). Do not add others.",
+  "seminar": {
+    "id": "seminar",
+    "name": "SEMINAR 免費上堂體驗",
+    "price": 0,
+    "priceLabel": "免費",
+    "buyable": false
+  },
+  "online-video": {
+    "id": "online-video",
+    "name": "網上視頻課程",
+    "price": 588,
+    "priceLabel": "HK$588",
+    "buyable": true,
+    "course": "Hermes AI 智能體入門：自動化工作流程同多智能體協作",
+    "syllabusReady": true,
+    "syllabusDraft": "syllabus-ai-agent"
+  },
+  "online-1on1": {
+    "id": "online-1on1",
+    "name": "網上1對1收費課程",
+    "price": 1288,
+    "priceLabel": "HK$1,288",
+    "buyable": true,
+    "detail": "合共 6 小時",
+    "syllabusReady": true,
+    "syllabusDraft": "syllabus-ai-agent"
+  },
+  "in-person": {
+    "id": "in-person",
+    "name": "現場上堂課程",
+    "price": 2200,
+    "priceLabel": "HK$2,200",
+    "buyable": false,
+    "course": "AI與設計及文書多功能使用班",
+    "detail": "8 堂，合共 24 小時",
+    "syllabusReady": false,
+    "syllabusDraft": "syllabus-ai-agent",
+    "catalogue": "data/inperson-courses.json"
+  },
+  "_syllabusNote": "2026-10-19 22:10 (Mikey): online-video and online-1on1 use the Hermes syllabus; in-person is a catalogue of 7 courses (data/inperson-courses.json), each its own buyable product id ip-<slug>."
+}

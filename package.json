@@ -1,0 +1,34 @@
+{
+  "name": "mikeng-ai",
+  "version": "1.0.0",
+  "description": "mikeng_course AI course website (public site + admin/CRM backend)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev:backend": "node scripts/admin-dev.js",
+    "seed:demo": "node scripts/seed-demo.js",
+    "demo:wipe": "node scripts/seed-demo.js --wipe",
+    "admin:create": "node scripts/create-admin.js",
+    "check": "node scripts/check.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "better-sqlite3": "^11.10.0",
+    "chart.js": "^4.5.1",
+    "express": "^4.22.3",
+    "multer": "^2.4.0",
+    "stripe": "^17.7.0"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^24.43.1",
+    "sharp": "^0.35.5"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  }
+}

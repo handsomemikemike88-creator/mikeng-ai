@@ -1,0 +1,16 @@
+# Exclusion list for any zip/export of site-full (e.g. `zip -r out.zip site-full -x@site-full/scripts/export-exclude.txt`).
+# These can hold personal data or secrets and must never be shipped.
+*/node_modules/*
+*/.env
+*.db
+*.db-*
+*.sqlite*
+*/data/app.db*
+*/data/submissions.json
+*/data/outbox*.jsonl
+*outbox*.jsonl
+*.log
+*/uploads/*
+*/shots/backend/*
+*/backups/*
+*backups/*.db

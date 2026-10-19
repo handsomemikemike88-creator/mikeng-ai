@@ -1,0 +1,42 @@
+# mikeng-ai.com course site behind the VPS's existing Traefik (host network, entrypoint websecure, certresolver letsencrypt).
+# Secrets/values come from the project environment (Hostinger Docker Manager). NO values in this file.
+# Router/service names are "mikengai*" so they don't clash with the salon project's "salon*" routers.
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+      TRUST_PROXY: "1"
+      PUBLIC_BASE_URL: ${PUBLIC_BASE_URL:-https://mikeng-ai.com}
+      SITE_INDEXABLE: ${SITE_INDEXABLE:-0}          # 0 = noindex everywhere (default). Set 1 only at launch with Mikey's OK.
+      BACKEND: ${BACKEND:-on}
+      APP_SECRET: ${APP_SECRET}                      # required in production
+      APP_DB: /data/app.db
+      UPLOAD_DIR: /data/uploads
+      OUTBOX_FILE: /data/outbox.jsonl
+      SUBMISSIONS_FILE: /data/submissions.json
+      MAX_UPLOAD_MB: ${MAX_UPLOAD_MB:-500}
+      MEDIA_URL_TTL_MIN: ${MEDIA_URL_TTL_MIN:-120}
+      BCRYPT_ROUNDS: ${BCRYPT_ROUNDS:-12}
+      STAFF_INVITE_CODE: ${STAFF_INVITE_CODE:-}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}           # first admin only; unset after it exists
+      ADMIN_NAME: ${ADMIN_NAME:-}
+      STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY:-}     # sk_test_ only; empty = checkout disabled / 「即將開放」
+      STRIPE_WEBHOOK_SECRET: ${STRIPE_WEBHOOK_SECRET:-}
+      STRIPE_PRICE_MAP: ${STRIPE_PRICE_MAP:-}
+    volumes:
+      - mikengai-data:/data
+    expose:
+      - "3000"
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.mikengai.rule=Host(`mikeng-ai.com`) || Host(`www.mikeng-ai.com`)
+      - traefik.http.routers.mikengai.entrypoints=websecure
+      - traefik.http.routers.mikengai.tls.certresolver=letsencrypt
+      - traefik.http.routers.mikengai.service=mikengai
+      - traefik.http.services.mikengai.loadbalancer.server.port=3000
+volumes:
+  mikengai-data:

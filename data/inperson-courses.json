@@ -1,0 +1,289 @@
+{
+ "_note": "In-person catalogue (Mikey confirmed 2026-10-19 22:10): 7 courses, each HK$2,200, 8 堂，合共 24 小時. Content from syllabus-for-website.md (6) + Hermes draft. Doc hours (6h/9h) overridden; modules shown without per-class breakdown.",
+ "price": 2200,
+ "priceLabel": "HK$2,200",
+ "detail": "8 堂，合共 24 小時",
+ "courses": [
+  {
+   "slug": "gemini",
+   "n": 1,
+   "title": "Google Gemini 全能應用技能，AI AGENT 同步使用",
+   "short": "Google Gemini 全能應用同 AI Agent",
+   "audience": "上班族、市場推廣人員、項目經理、AI 愛好者，以及想用 Google Gemini 同 AI 智能體（AI Agent）幫手做嘢嘅人。",
+   "prereq": "唔需要寫程式，識基本用電腦同上網就得。",
+   "goals": "學識 Google Gemini 嘅主要功能（處理好長嘅文件、同時處理文字圖像聲音等多種內容、配合 Google Workspace 一齊用），同埋學識用 Gemini Spark 同 AI 智能體，將跨平台嘅工作自動化。",
+   "modules": [
+    {
+     "title": "模組一：Gemini 基本功同多模態應用",
+     "items": [
+      "Gemini 點樣運作；寫提示詞（prompt）嘅技巧同對話方法",
+      "用長上下文（Long Context）一次過處理大量文件、影片同程式碼",
+      "多模態實戰：配合圖像、語音同即時搜尋，整商業文案同創意素材"
+     ]
+    },
+    {
+     "title": "模組二：Google 辦公室工具同 Workspace 自動化",
+     "items": [
+      "Gemini 配合 Gmail、Google 試算表（Sheets）、文件（Docs）同雲端硬碟一齊用",
+      "自動整理會議紀錄、喺幾個檔案之間攞資料、管理時間表",
+      "建立個人知識庫同筆記工作流程（NotebookLM 配合 Gemini）",
+      "AI 智能體同自動化任務：用 Gemini Spark 同瀏覽器代理工具，處理跨應用程式嘅任務"
+     ]
+    }
+   ],
+   "learn": "由最基本嘅 Gemini 提問技巧，進一步學識操作 AI 智能體；唔再只當 AI 係搜尋器，而係學識俾任務、定目標，等 AI 幫手完成工作。",
+   "project": "砌一套個人或團隊嘅自動化工作流程：用 Gemini 連接唔同資料來源同 AI 智能體工具，由定目標、攞資料、分析，做到生成報告同發通知。實際效果要視乎設定，結果仍然要人手檢查。",
+   "tools": "Gemini Spark 需要 Google AI Pro 或 Ultra 付費訂閱，只限 18 歲或以上、用個人 Google 帳戶；公司或學校帳戶暫時用唔到。費用唔包喺學費入面。",
+   "note": "",
+   "disclaimer": "",
+   "_sourceHours": "6 小時（文件）",
+   "launchReady": true
+  },
+  {
+   "slug": "gemini-notebooklm-travel",
+   "n": 2,
+   "title": "Gemini + Google NotebookLM：AI 製作旅遊 planning",
+   "short": "Gemini + NotebookLM AI 旅遊 planning",
+   "audience": "鍾意自由行嘅人、旅遊達人、旅行社從業員、內容創作者，以及想用 Gemini 同 NotebookLM 整理行程資料嘅人。",
+   "prereq": "識基本用電腦或手機上網就得，唔需要任何程式背景。",
+   "goals": "用 Gemini 即時搜尋資料、用文字或相片諗行程；再用 NotebookLM 將網頁、PDF、YouTube 影片同筆記集中整理，砌出一套有條理嘅旅遊規劃流程。",
+   "modules": [
+    {
+     "title": "模組一：用 Gemini 諗行程、整大綱",
+     "items": [
+      "Gemini 點樣運作：用長上下文同聯網搜尋，搵景點、地道美食同交通資料",
+      "寫旅遊提示詞：講清楚日數、預算分配，同親子、情侶、一個人去等唔同主題",
+      "多模態應用：上載旅遊相片、手繪地圖或景點截圖，等 Gemini 幫手認出地點、轉做具體路線"
+     ]
+    },
+    {
+     "title": "模組二：用 NotebookLM 建立資料庫、整合行程",
+     "items": [
+      "乜嘢係 NotebookLM：點樣用自己揀嘅資料做依據，減少 AI 作大話（即係「幻覺」）",
+      "匯入唔同來源嘅資料：網上遊記、PDF 旅遊指南、Google 文件，甚至 YouTube 影片",
+      "整旅遊計劃：用內置對話同範本，整出包括每日路線、交通備註同預算嘅行程表，同埋同旅伴一齊編輯"
+     ]
+    }
+   ],
+   "learn": "學識用 NotebookLM「只根據你提供嘅資料回答」嘅特點，令每個推介都有出處、方便核對（AI 仍然可能出錯，出發前要自己再核實）；學識將旅遊手冊同行程表分享俾親友。",
+   "project": "整一份 5 至 7 日海外自由行 AI 旅遊計劃書：包括用 Gemini 搜集嘅靈感、喺 NotebookLM 整理好嘅筆記本，同埋可以同親友共用嘅每日行程同預算表。",
+   "tools": "Gemini、NotebookLM（部分功能可能要付費）。",
+   "note": "",
+   "disclaimer": "",
+   "_sourceHours": "6 小時（文件）",
+   "launchReady": true
+  },
+  {
+   "slug": "stitch",
+   "n": 3,
+   "title": "Google Stitch - AI design UI and website automation",
+   "short": "Google Stitch AI UI 及網站設計",
+   "audience": "網頁設計師、前端工程師、產品經理、UI/UX 從業員，以及想用 Google Stitch 由文字整出網頁介面嘅人。",
+   "prereq": "識基本瀏覽同操作網頁就得，唔需要深厚嘅寫程式基礎。",
+   "goals": "學識用 Google Stitch（一個用 Gemini 模型嘅 AI 介面設計工具），用文字、手繪草圖或網址整出響應式網頁介面（即係電腦同手機都睇得）；建立設計系統；整互動原型同匯出前端程式碼。",
+   "modules": [
+    {
+     "title": "模組一：Google Stitch 基本同 AI 網頁草圖",
+     "items": [
+      "Stitch 點樣用 Gemini 模型，將文字提示、草圖或參考網址轉做網頁介面",
+      "寫網頁設計提示詞：用「Zoom-Out-Zoom-In」方法講清楚目標客群、頁面層次（Hero 主視覺區、導覽列、卡片排版）同視覺風格",
+      "實戰：用標準模式同實驗模式（Gemini Pro）一次整幾頁網頁原型（首頁、產品介紹、聯絡我們等）"
+     ]
+    },
+    {
+     "title": "模組二：設計系統、互動原型同匯出程式碼",
+     "items": [
+      "建立一致嘅設計系統（Design Systems）同 DESIGN.md：自訂主題顏色、字體、按鈕樣式，亦可以由網址提取現有網站嘅設計風格",
+      "用連續語音指令同節點式畫布（AI-Native Canvas）微調個別區塊",
+      "將設計轉做可以互動嘅網頁原型，匯出前端程式碼（HTML/CSS/JSX），或者配合 Figma 協作"
+     ]
+    }
+   ],
+   "learn": "由文字構思、UI 畫面到前端程式碼嘅完整流程；用 AI 輔助產品開發嘅思考方法。",
+   "project": "完成一個多頁面響應式網頁設計專案：包括用 Stitch 整嘅主頁同子頁面、一套一致嘅設計系統，同埋互動原型及前端程式碼。",
+   "tools": "Google Stitch（Google 實驗性工具，功能可能會變）；Figma 部分功能要付費。",
+   "note": "",
+   "disclaimer": "",
+   "_sourceHours": "6 小時（文件）",
+   "launchReady": true
+  },
+  {
+   "slug": "flow",
+   "n": 4,
+   "title": "Google Flow 智慧生成與 AI 剪輯進階實戰",
+   "short": "Google Flow AI 影片生成同剪輯",
+   "audience": "影片創作者、社交媒體市場推廣人員、剪片師、工作室經營者，以及想學 AI 影片生成同自動化剪片嘅人。",
+   "prereq": "識基本用電腦，對剪片或者 AI 圖像／影片工具有初步概念就得（唔需要專業特效底子）。",
+   "goals": "學識用 Google Flow 生成影片，配合 AI 劇本、配音、分鏡同常用剪片軟件，由零開始砌一條影片製作流程。",
+   "modules": [
+    {
+     "title": "模組一：Google Flow 基本同 AI 影片素材生成",
+     "items": [
+      "認識 Google Flow：文字轉影片（Text-to-Video）、圖像生成同動態控制",
+      "影片提示詞：控制畫面風格、光影、鏡頭運動（推、拉、搖、移）同角色一致",
+      "實戰：用 Flow 一次過整多段短片背景素材、動態視覺同分鏡概念圖"
+     ]
+    },
+    {
+     "title": "模組二：AI 劇本視覺化、分鏡同配音",
+     "items": [
+      "用 AI 劇本同分鏡工具（例如 Boords），將文字劇本轉做有結構嘅分鏡圖",
+      "AI 語音同聲效：用工具（例如 ElevenLabs）生成旁白同音效",
+      "聲畫同步規劃：為之後剪片整理好聲音同畫面素材"
+     ]
+    },
+    {
+     "title": "模組三：AI 輔助剪片同後期",
+     "items": [
+      "將 AI 素材匯入常用剪片軟件（例如 Premiere、DaVinci Resolve、CapCut）",
+      "用 AI 自動上字幕、去背景、提升畫質（Upscaling）同補幀",
+      "用 AI 刪走多餘片段、控制節奏",
+      "打通「AI 文字 → Flow 畫面 → 分鏡 → 剪片後期」嘅完整流程",
+      "自動調整唔同平台尺寸（例如 9:16 短片、16:9 長片）同批次輸出設定"
+     ]
+    }
+   ],
+   "learn": "",
+   "project": "每位學員完成一條約 1 分鐘嘅 AI 宣傳片或社交媒體短片，包括 Flow 生成嘅素材、AI 旁白、分鏡同剪片後期。",
+   "tools": "Google Flow、ElevenLabs、Boords、Premiere 等工具多數要付費訂閱，費用唔包喺學費入面；DaVinci Resolve、CapCut 有免費版。",
+   "note": "",
+   "disclaimer": "",
+   "_sourceHours": "9 小時（文件）",
+   "launchReady": true
+  },
+  {
+   "slug": "spark",
+   "n": 5,
+   "title": "Google Spark 教育應用與教師自動化工作坊",
+   "short": "Google Spark 教育應用同教師自動化",
+   "audience": "學校老師、教育工作者、補習導師、課程行政人員，以及想用 Google Spark 同自動化工具減輕備課同行政工作嘅人。",
+   "prereq": "識基本用 Google 帳戶同 Workspace，唔需要寫程式。",
+   "goals": "學識 Google Spark 嘅主要功能同用法；用 AI 智能體同全日運作嘅自動化工具，處理備課、協助批改、家長溝通同班務行政。",
+   "modules": [
+    {
+     "title": "模組一：認識 Google Spark 同智能備課",
+     "items": [
+      "認識 Google Spark：一個 AI 應用同自動化工具",
+      "智能備課：用 Spark 整教案、工作紙、課堂互動問答同分程度測驗卷",
+      "用多模態同長上下文功能，將課本 PDF、教學影片同參考資料轉做課堂多媒體素材"
+     ]
+    },
+    {
+     "title": "模組二：班務行政自動化同家長溝通",
+     "items": [
+      "自動整理學生出席、成績統計同日常通告草稿",
+      "AI 助教：用 Spark 設定自動回覆電郵、家長常見問題範本同交功課提醒",
+      "綜合實作：砌一套自己嘅「備課同行政自動化小流程」，即場整出教案同表格範本"
+     ]
+    },
+    {
+     "title": "模組三：評估、個別回饋同學習分析",
+     "items": [
+      "協助批改：用 Spark 幫手分析學生問答題或作文，按評分準則（Rubric）草擬個別評語，老師再自己審閱",
+      "分程度教材：按測驗結果整「基礎鞏固」同「進階挑戰」學習材料",
+      "綜合專案：整合前兩個模組，即場砌一個教學同行政自動化流程，並完成測試"
+     ]
+    }
+   ],
+   "learn": "",
+   "project": "每位學員整一個個人化教學同行政自動化專案：包括用 Spark 整嘅教案同工作紙，同埋一個處理班務通告同功課追蹤嘅工作流程範本。",
+   "tools": "Google Spark（即 Gemini Spark，Gemini app 入面嘅「Task」功能）需要 Google AI Pro 或 Ultra 付費訂閱，只限 18 歲或以上、用個人 Google 帳戶；學校或公司帳戶暫時用唔到。費用唔包喺學費入面。",
+   "note": "將學生資料放入 AI 工具之前，要先跟學校政策同《個人資料（私隱）條例》。",
+   "disclaimer": "",
+   "_sourceHours": "9 小時（文件）",
+   "launchReady": true
+  },
+  {
+   "slug": "claude-codex-investing",
+   "n": 6,
+   "title": "運用 Claude 與 Codex App 建立財報同公開數據分析工作流程",
+   "short": "Claude 同 Codex 財報同數據分析",
+   "audience": "想學用 Claude 同 Codex App 閱讀財報、整理公開數據同寫分析報告嘅人，例如做會計、財務或者行政工作嘅人、商科學生，同對財報有興趣嘅一般人。",
+   "prereq": "睇過財報或者有基本商業概念會有幫助，但唔係必須；唔需要寫程式背景。",
+   "goals": "學識 Claude（擅長處理長文件同整理重點）同 Codex App（擅長寫程式同處理數據）點樣分工，建立一條由閱讀文件、整理數據到出報告嘅工作流程。",
+   "modules": [
+    {
+     "title": "模組一：兩個 AI 工具點分工，同用 Claude 閱讀財報",
+     "items": [
+      "Claude 同 Codex App 各自擅長乜、點分工",
+      "用 Claude 一次過讀公開嘅上市公司年報、業績發布會逐字稿同經濟報告，整理重點",
+      "寫提示詞：叫 AI 列出財報入面提及嘅風險項目同公司自己描述嘅競爭優勢，再逐點對返原文核實"
+     ]
+    },
+    {
+     "title": "模組二：用 Codex App 處理數據同做圖表",
+     "items": [
+      "用日常語言叫 Codex App 寫程式，攞公開數據或者用模擬數據",
+      "數據清理同圖表：用 Codex App 處理試算表，整走勢圖同財務數據圖表",
+      "回測統計（只作學習示範）：用歷史或模擬數據，學點寫簡單回測程式、點睇統計結果，同埋回測嘅局限"
+     ]
+    },
+    {
+     "title": "模組三：兩個工具串連，自動出分析報告",
+     "items": [
+      "先用 Codex 按條件整理數據表，再用 Claude 摘要相關文件",
+      "新聞同公告整理：用 Claude 摘要公開新聞同公告嘅重點同時間線（只整理資料，唔作買賣判斷）",
+      "砌一條工作流程：自動生成包括數據圖表同文件摘要嘅分析報告",
+      "核對 AI 輸出：建立檢查步驟，減少 AI 出錯（「幻覺」）"
+     ]
+    }
+   ],
+   "learn": "唔識寫程式，都可以叫 AI 幫手寫處理財報同數據嘅小工具；用兩個工具建立一條有條理、可以核實嘅數據同報告分析流程。",
+   "project": "",
+   "tools": "Claude 同 Codex App 都要付費訂閱，費用唔包喺學費入面。",
+   "note": "",
+   "disclaimer": "本課程只教 AI 工具操作同數據處理方法，所有示範只用公開或模擬數據。導師及 mikeng_course 並非證監會持牌法團，課程唔會提供任何股票推介、買賣訊號、目標價或個人化投資意見，亦唔會評論學員個人持倉。課程內容唔構成持牌人士所需嘅培訓或 CPD。回測同歷史數據唔代表將來表現；投資涉及風險，價格可升可跌，學員須自行作出決定並承擔風險。",
+   "_sourceHours": "9 小時（文件）",
+   "disclaimerPh": "待證監會／法律意見確認",
+   "_v18": "copy.md v18 safer version, confirmed directly by Mikey 2026-10-19 22:37 HKT",
+   "launchReady": false,
+   "launchBlockReason": "HK availability of Claude and Codex App not yet confirmed (copy.md v18 :623); SFC/legal review of disclaimer pending.",
+   "toolsPh": "大約月費、香港可唔可以用 — 待確認"
+  },
+  {
+   "slug": "hermes-agent",
+   "n": 7,
+   "title": "Hermes 智能體：建立自主 AI 工作流程同多智能體系統",
+   "short": "Hermes 智能體同多智能體自動化",
+   "audience": "初學者。由最基本開始講，唔識寫程式都得，亦唔需要事先識大型語言模型（LLM）。",
+   "prereq": "唔需要寫程式經驗，亦唔需要 AI 或 LLM 基礎。",
+   "goals": [
+    "學識安裝同按自己需要設定 Hermes 智能體（一種識自己諗步驟、幫你做事嘅 AI 助手）",
+    "學識安排幾個 AI 智能體分工合作",
+    "學識透過 MCP 或 API 將智能體連接其他工具（可以當佢係俾 AI 用其他程式嘅「插頭」）",
+    "砌出一個用得喺實際工作嘅自動化流程"
+   ],
+   "modules": [
+    {
+     "title": "模組一：認識 Hermes 智能體",
+     "items": [
+      "由最基本講起：乜嘢係 AI 智能體，Hermes 智能體點樣一步步諗、一步步做（核心架構同自主推理循環）",
+      "一步步準備好環境：連接 AI 服務（API），同埋喺自己電腦行（本地執行）",
+      "點樣用文字指示（提示詞）教智能體做事：系統提示詞、記住做到邊（狀態管理）同記憶"
+     ]
+    },
+    {
+     "title": "模組二：連接工具、自動化工作",
+     "items": [
+      "俾智能體用外部工具、資料庫同電腦入面嘅檔案",
+      "用 MCP 同自訂 API 幫智能體加新功能（MCP 係一套俾 AI 連接工具嘅標準）",
+      "教智能體按情況揀做法（決策樹）、出錯時點處理，同埋自己修正",
+      "設計幾個智能體分工合作，例如一個搵資料、一個寫、一個檢查"
+     ]
+    }
+   ],
+   "learn": [
+    "實戰操作：親手安裝同設定可以自訂嘅開源智能體，唔只係用現成嘅封閉平台。",
+    "拆解問題：學一個方法，將大而模糊嘅工作拆細，交俾唔同智能體處理。"
+   ],
+   "project": "用 Hermes 智能體砌一個屬於自己嘅多智能體自動化流程：佢可以自動搵資料、處理幾個工具傳來嘅資料、按步驟做事，再產生交付物（例如自動化報告或者軟件原型）。實際效果要視乎題目同設定，交付物仍然要人手檢查。",
+   "tools": "部分 AI 工具或模型 API 可能要另外付費，費用唔包喺學費入面。",
+   "note": "",
+   "disclaimer": "",
+   "_sourceHours": "6 小時（文件）",
+   "launchReady": true
+  }
+ ],
+ "_source": "syllabus-for-website.md + copy.md v16 §6.2A (2026-10-19 22:12)",
+ "_launchReadyNote": "launchReady:false hides a course in production (SITE_INDEXABLE=1 or NODE_ENV=production): no card, sitemap, JSON-LD, page (404) or checkout. Locally it shows with a 「未公開：待確認香港供應」 banner."
+}
