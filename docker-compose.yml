@@ -38,5 +38,57 @@ services:
       - traefik.http.routers.mikengai.tls.certresolver=letsencrypt
       - traefik.http.routers.mikengai.service=mikengai
       - traefik.http.services.mikengai.loadbalancer.server.port=3000
+  backup:
+    # Nightly backup of mikengai-data (read-only) into the named volume `mikengai-backups`.
+    # One run at container start, then every day at 03:00 Asia/Hong_Kong. Keeps 14 days. No secrets.
+    image: alpine:3.20
+    restart: unless-stopped
+    depends_on:
+      - app
+    environment:
+      TZ: Asia/Hong_Kong
+      BACKUP_HOUR: "03"
+      KEEP_DAYS: "14"
+    volumes:
+      - mikengai-data:/data:ro
+      - mikengai-backups:/backups
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        set -u
+        apk add --no-cache sqlite tzdata >/dev/null || { echo "apk add failed" >&2; sleep 300; exit 1; }
+        umask 077
+        mkdir -p /backups
+        run() {
+          d="$$(date +%Y%m%d-%H%M%S)"; w="/backups/.work-$$d"; f="/backups/mikengai-$$d.tar.gz"
+          mkdir -p "$$w"
+          ok=1
+          if [ -f /data/app.db ]; then
+            sqlite3 "file:/data/app.db?mode=ro" ".backup '$$w/app.db'" && sqlite3 "$$w/app.db" "PRAGMA integrity_check;" | grep -qx ok || ok=0
+          else
+            echo "no /data/app.db yet"
+          fi
+          for x in submissions.json outbox.jsonl; do [ -f "/data/$$x" ] && cp "/data/$$x" "$$w/"; done
+          [ -d /data/uploads ] && tar -C /data -cf "$$w/uploads.tar" uploads
+          if [ "$$ok" = 1 ] && tar -C "$$w" -czf "$$f.tmp" . ; then
+            mv "$$f.tmp" "$$f"
+            echo "$$(date '+%F %T %Z') backup OK: $$f ($$(du -h "$$f" | cut -f1))"
+          else
+            rm -f "$$f.tmp"; echo "$$(date '+%F %T %Z') backup FAILED" >&2
+          fi
+          rm -rf "$$w"
+          find /backups -name 'mikengai-*.tar.gz' -type f -mtime +$$((KEEP_DAYS - 1)) -print -delete
+          echo "backups kept: $$(ls /backups | grep -c '^mikengai-.*\.tar\.gz$$')"
+        }
+        echo "backup service started; daily at $${BACKUP_HOUR}:00 $$TZ, keep $${KEEP_DAYS} days"
+        sleep 10
+        run
+        while true; do
+          now=$$(date +%s); next=$$(date -d "$$(date +%F) $${BACKUP_HOUR}:00:00" +%s 2>/dev/null)
+          [ "$$next" -le "$$now" ] && next=$$((next + 86400))
+          sleep $$((next - now))
+          run
+        done
 volumes:
   mikengai-data:
+  mikengai-backups:
